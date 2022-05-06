@@ -1,0 +1,8 @@
+- name: configure web hosts group as sudo
+  hosts: web
+  become: yes
+  tasks:
+    - name: Install apache2
+      apt:
+        name: apache2
+        update_cache: yes

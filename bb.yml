@@ -1,0 +1,16 @@
+---
+
+- name: Sample pool playbook
+  hosts: bigip 
+  connection: local
+
+  tasks:
+    - name: create web servers pool
+      bigip_pool:
+        name: web-servers2
+        lb_method: ratio-member
+        password: passer
+        user: berenger
+        server: '{{inventory_hostname}}'
+        validate_certs: no
+

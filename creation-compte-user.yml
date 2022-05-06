@@ -1,0 +1,9 @@
+---
+
+- hosts: clientlinux1
+  tasks:
+  - name: Creation de l'utilisateur Angeline
+    user:
+      name: Angeline
+      state: present
+      password: password

@@ -1,0 +1,12 @@
+---
+
+- hosts: clientlinux1
+  tasks:
+    - name: install apache php telnet bind9 
+      apt: name={{ item }}
+      with_items:
+        - apache2
+        - php 
+        - telnet
+        - bind9
+  

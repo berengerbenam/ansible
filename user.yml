@@ -1,0 +1,12 @@
+---
+
+- hosts: clientlinux1
+  tasks:
+  - name: L'ajout de compte Angeline au groupe sudo
+    user:
+      name: Angeline
+      state: present
+      groups: sudo
+      append: yes
+      password: "{{ 'password' | password_hash('sha512') }}"
+

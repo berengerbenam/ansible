@@ -1,0 +1,19 @@
+---
+
+- hosts: clientlinux1
+  tasks:
+  - name:  supprimer cet utilisateur en passant simplement le nom et le status « absent ».
+    user:
+      name: morel
+      state: absent
+      groups: sudo
+      append: yes
+      uid: 1500
+      shell: /sbin/nologin
+      generate_ssh_key: yes
+      password: "{{ 'password' | password_hash('sha512') }}"
+      password_lock: yes
+
+
+
+

@@ -1,0 +1,10 @@
+---
+
+- hosts: clientwindows1
+  tasks:
+    - name: Creation user Justine
+      ansible.windows.win_user:
+        name: Justine
+        password: Passer123
+        state: absent
+

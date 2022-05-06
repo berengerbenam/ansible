@@ -1,0 +1,45 @@
+---
+
+- hosts: clientlinux1
+  tasks:
+    - name: "installation apache2"
+      apt:
+         name: apache2
+         update_cache: yes
+         cache_valid_time: 3600
+         state: present
+
+    - name: "installation mysql-server"
+      apt:
+         name: mysql-server
+         update_cache: yes
+         cache_valid_time: 3600
+         state: present
+         
+    - name: "installation php"
+      apt:
+         name: php
+         update_cache: yes
+         cache_valid_time: 3600
+         state: present
+         
+
+         
+            
+
+        
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+

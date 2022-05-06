@@ -1,0 +1,10 @@
+---
+
+- hosts: clientlinux1
+  tasks:
+  - name: Creation user touadera.
+    user:
+      name: touadera
+      state: absent
+      password: "{{ 'password' | password_hash('sha512') }}"
+

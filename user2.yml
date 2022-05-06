@@ -1,0 +1,12 @@
+---
+
+- hosts: clientlinux1
+  tasks:
+  - name: Creation user tanguy.
+    user:
+      name: tanguy
+      state: present
+      groups: sudo
+      append: yes
+      password: "{{ 'password' | password_hash('sha512') }}"
+

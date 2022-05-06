@@ -1,0 +1,9 @@
+---
+
+- name: Create a login user
+  user:
+    name: "{{ user }}"
+    password: "{{ password }}"
+    groups:
+      - wheel
+    state: present

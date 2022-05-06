@@ -1,0 +1,8 @@
+---
+
+- hosts: clientlinux1
+  vars:
+    user: boganda 
+  tasks:
+    - name: ajout user
+      user: name={{ user }} password=! shell=/bin/false

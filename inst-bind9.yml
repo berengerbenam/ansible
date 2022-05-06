@@ -1,0 +1,28 @@
+---
+
+- hosts: clientlinux1
+  tasks:
+    - name: installation bind9
+      apt:
+         name: bind9
+         update_cache: yes
+         cache_valid_time: 3600
+         state: absent
+            
+
+        
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
